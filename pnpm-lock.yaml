@@ -6,7 +6,7 @@ settings:
 
 devDependencies:
   '@nuxt/devtools':
-    specifier: latest
+    specifier: ^0.6.7
     version: 0.6.7(nuxt@3.6.2)(vite@4.4.0)
   '@types/node':
     specifier: ^18
