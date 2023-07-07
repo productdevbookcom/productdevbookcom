@@ -1,3 +1,5 @@
 <template>
-  <Logo />
+  <div class="">
+    <Logo type="big" />
+  </div>
 </template>
