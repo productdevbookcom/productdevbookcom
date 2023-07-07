@@ -24,8 +24,6 @@ useHead({
 
 <template>
   <NuxtLayout>
-    <div class="text-white text-3xl">
-      Blendersheik
-    </div>
+    <NuxtPage />
   </NuxtLayout>
 </template>
