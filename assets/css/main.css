@@ -11,5 +11,6 @@
     text-rendering: optimizeLegibility;
     -webkit-tap-highlight-color: transparent;
     letter-spacing: -0.01em;
+    overflow-x: hidden;
   }
 }
