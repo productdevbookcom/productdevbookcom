@@ -1,46 +1,29 @@
 <script setup lang="ts">
-defineProps({
-  priority: {
-    type: String,
-    required: false,
-  },
-  link: {
-    type: String,
-    required: true,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  blank: {
-    type: Boolean,
-    required: false,
-  },
-})
+interface ButtonProps {
+  priority?: string
+  link: string
+  name: string
+  blank?: boolean
+}
+
+defineProps<ButtonProps>()
 </script>
 
 <template>
   <a
-    :target="[blank === true ? '_blank' : '']" :class="[priority === 'primary' ? 'primary-btn' : 'secondary-btn']"
+    :target="blank === true ? '_blank' : ''" :class="[priority === 'primary' ? 'primary-btn hover:bg-royalblue-500 hover:border-royalblue-500' : 'secondary-btn hover:bg-codgray-900']"
     :href="link"
   >{{
     name }}</a>
 </template>
 
-<style>
+<style lang="postcss">
 .primary-btn {
   @apply bg-royalblue-600 px-4 py-2 rounded-full border-royalblue-600 border text-white transition duration-300;
-
-  &:hover {
-    @apply bg-royalblue-500 border-royalblue-500;
-  }
 }
 
 .secondary-btn {
   @apply bg-codgray-950 px-4 py-2 rounded-full border-codgray-900 border text-white transition duration-300;
 
-  &:hover {
-    @apply bg-codgray-900;
-  }
 }
 </style>
