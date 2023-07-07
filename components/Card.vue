@@ -1,33 +1,23 @@
 <script setup lang="ts">
-defineProps({
-  category: {
-    type: String,
-    required: false,
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  description: {
-    type: String,
-    required: true,
-  },
-  link: {
-    type: String,
-    required: false,
-  },
-})
+interface CardProps {
+  category: string
+  link: string
+  title: string
+  description: string
+}
+
+defineProps<CardProps>()
 </script>
 
 <template>
-  <div class="relative w-[360px] overflow-hidden group">
-    <a :href="link" class="w-[360px] p-4 rounded-2xl flex-col gap-2 backdrop-blur-sm bg-[#575757]/10 border border-[#303030] inline-flex">
+  <div class="relative  overflow-hidden group">
+    <a :href="link" class="w-full p-4 rounded-2xl flex-col gap-2 backdrop-blur-sm bg-[#575757]/10 border border-[#303030] inline-flex">
       <div class="">
-      <span class="text-xs px-2 py-1 border border-[#222] rounded-full text-[#676767] inline">{{ category }}</span>
+        <span class="text-xs px-2 py-1 border border-[#222] rounded-full text-[#676767] inline">{{ category }}</span>
 
       </div>
       <span class="text-white font-medium">{{ title }}</span>
-      <p class="text-[#6D6D6D]">{{ description }}</p>
+      <p class="text-[#6D6D6D] text-sm md:text-base">{{ description }}</p>
       <div class="card-light" />
     </a>
   </div>
