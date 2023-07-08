@@ -53,11 +53,13 @@ module.exports = {
           900: '#313131',
           950: '#1c1c1c',
         },
-
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         display: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+      container: {
+        center: true,
       },
     },
   },
@@ -66,5 +68,24 @@ module.exports = {
       // Select the icon collections you want to use
       collections: getIconCollections(['fa-brands']),
     }),
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          'maxWidth': '92%',
+          '@screen sm': {
+            maxWidth: '632px',
+          },
+          '@screen md': {
+            maxWidth: '900px',
+          },
+          '@screen lg': {
+            maxWidth: '1024px',
+          },
+          '@screen xl': {
+            maxWidth: '1240px',
+          },
+        },
+      })
+    },
   ],
 }
