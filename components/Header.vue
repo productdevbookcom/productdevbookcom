@@ -7,7 +7,7 @@ function Toggle() {
 </script>
 
 <template>
-  <nav class="py-4 border-b border-[#212121] w-full">
+  <nav class="py-4 border-b border-[#212121] w-full z-10">
     <div class="container grid grid-cols-2 md:grid-cols-3 items-center">
       <div class="">
         <Logo />
@@ -38,17 +38,17 @@ function Toggle() {
         <div class="w-[22px] h-[1px] bg-white transition duration-300" :class="{ 'rotate-45 translate-y-[1px]': isOpen }" />
         <div class="w-[22px] h-[1px] bg-white transition duration-300" :class="{ '-rotate-45 ': isOpen }" />
       </div>
-      <div class="fixed top-[61px] left-0 translate-x-[200%] w-full h-screen  transition duration-300 px-6" :class="{ '!translate-x-[0%]': isOpen }">
+      <div class="fixed top-[61px] left-0 translate-x-[200%] w-full h-screen bg-woodsmoke-950 z-10 transition duration-300 px-6" :class="{ '!translate-x-[0%]': isOpen }">
         <div class="flex flex-col gap-8">
           <ul class="flex flex-col gap-3 mt-8">
             <li>
-              <a href="#" class="text-[#818181] text-3xl font-medium hover:text-white transition duration-300">oku</a>
+              <a href="#" class="text-[#9e9e9e] text-3xl font-medium hover:text-white transition duration-300">oku</a>
             </li>
             <li>
-              <a href="#" class="text-[#818181] text-3xl  font-medium hover:text-white transition duration-300">productdevbook</a>
+              <a href="#" class="text-[#9e9e9e] text-3xl  font-medium hover:text-white transition duration-300">productdevbook</a>
             </li>
             <li>
-              <a href="#" class="text-[#818181] text-3xl  font-medium hover:text-white transition duration-300">huntersofbook</a>
+              <a href="#" class="text-[#9e9e9e] text-3xl  font-medium hover:text-white transition duration-300">huntersofbook</a>
             </li>
           </ul>
           <ul class="flex items-center gap-2">

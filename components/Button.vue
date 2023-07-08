@@ -4,7 +4,7 @@ interface ButtonProps {
   link: string
   name: string
   blank?: boolean
-  icon?: 'arrow' | 'github'
+  icon?: 'arrow' | 'github' | 'discord'
 }
 
 defineProps<ButtonProps>()
@@ -17,6 +17,7 @@ defineProps<ButtonProps>()
     :href="link"
   >
     <span class="i-fa-brands-github text-white w-5 h-5" :class="{ hidden: icon !== 'github' }" />
+    <span class="i-fa-brands-discord text-white w-5 h-5" :class="{ hidden: icon !== 'discord' }" />
     {{ name }}
     <span class="i-ic-round-arrow-outward text-white w-5 h-5" :class="{ hidden: icon !== 'arrow' }" />
   </a>
