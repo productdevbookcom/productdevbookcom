@@ -1,9 +1,10 @@
 <script setup lang="ts">
 interface ButtonProps {
-  priority?: string
+  priority?: 'primary' | 'secondary'
   link: string
   name: string
   blank?: boolean
+  icon?: 'arrow' | 'github'
 }
 
 defineProps<ButtonProps>()
@@ -11,10 +12,14 @@ defineProps<ButtonProps>()
 
 <template>
   <a
+    class="inline-flex items-center gap-2"
     :target="blank === true ? '_blank' : ''" :class="[priority === 'primary' ? 'primary-btn hover:bg-royalblue-500 hover:border-royalblue-500 px-3 py-2 md:px-4 md:py-[10px]' : 'secondary-btn hover:bg-codgray-900 px-3 py-2 md:px-4 md:py-[10px]']"
     :href="link"
-  >{{
-    name }}</a>
+  >
+    <span class="i-fa-brands-github text-white w-5 h-5" :class="{ hidden: icon !== 'github' }" />
+    {{ name }}
+    <span class="i-ic-round-arrow-outward text-white w-5 h-5" :class="{ hidden: icon !== 'arrow' }" />
+  </a>
 </template>
 
 <style lang="postcss">
