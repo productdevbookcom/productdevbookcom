@@ -12,4 +12,7 @@
   <SocialMedia link="https://github.com">
     <span class="i-fa-brands-twitter text-white w-5 h-5" />
   </SocialMedia>
+  <div class="mx-auto">
+    <Newsletter />
+  </div>
 </template>
