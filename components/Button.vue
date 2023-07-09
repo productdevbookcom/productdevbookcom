@@ -23,7 +23,7 @@ defineProps<ButtonProps>()
   </a>
 </template>
 
-<style lang="postcss">
+<style>
 .primary-btn {
   @apply bg-royalblue-600 rounded-full border-royalblue-600 border text-white transition duration-300;
 }

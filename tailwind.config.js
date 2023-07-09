@@ -66,7 +66,7 @@ module.exports = {
   plugins: [
     iconsPlugin({
       // Select the icon collections you want to use
-      collections: getIconCollections(['fa-brands']),
+      collections: getIconCollections(['fa-brands', 'ic']),
     }),
     function ({ addComponents }) {
       addComponents({
