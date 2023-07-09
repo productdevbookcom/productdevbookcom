@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ProjectCards from './ProjectCards.vue'
-import type { CardsArrayProps } from './ProjectCards.vue'
+import type { IProjectCards } from './ProjectCards.vue'
 
 export interface ProjectProps {
   data: {
@@ -8,10 +8,8 @@ export interface ProjectProps {
     description: string
     github?: string
     website?: string
-    cards?: CardsArrayProps
-    cardsTitle?: string
+    cards?: IProjectCards[]
   }
-
 }
 
 defineProps<ProjectProps>()
@@ -33,15 +31,16 @@ defineProps<ProjectProps>()
       <Button priority="secondary" :link="data.github ? `https://github.com/${data.github}` : ''" name="Github" :blank="true" icon="github" :class="{ hidden: !data.github }" />
     </div>
 
-    <div class="flex flex-col" :class="{ '!hidden': !data.cards }">
+    <div v-for="item in data.cards" :key="item.name" class="flex flex-col" :class="{ '!hidden': !data.cards }">
       <div class="w-full h-[1px] bg-[#212121] my-8" />
       <div class="flex items-center gap-2">
         <h3 class="text-white text-2xl font-medium">
-          {{ data.cardsTitle }}
+          {{ item.name }}
         </h3>
         <a target="_blank" class="text-[#ccc] transition duration-300 hover:text-white flex items-center gap-1 group" :href="data.github ? `https://github.com/${data.github}` : ''">View All <span class="i-ic-outline-arrow-forward transition-all duration-300 group-hover:translate-x-1" /> </a>
       </div>
-      <ProjectCards class="mt-4" :data="data.cards" :class="{ '!hidden': !data.cards }" />
+
+      <ProjectCards class="mt-4" :data="item.data" :class="{ '!hidden': !data.cards }" />
     </div>
   </div>
 </template>

@@ -6,13 +6,12 @@ export interface CardProps {
   link: string
 }
 
-export interface CardsArrayProps extends Array<CardProps> {}
-
-interface ComponentProps {
-  data?: CardsArrayProps
+export interface IProjectCards {
+  name?: string
+  data?: CardProps[]
 }
 
-defineProps<ComponentProps>()
+defineProps<IProjectCards>()
 </script>
 
 <template>
