@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import type { ProjectProps } from 'components/Project.vue'
 
+const { trackEvent } = usePlausible()
+
+function linksClick(name: string) {
+  trackEvent('social', {
+    props: {
+      name,
+    },
+  })
+}
+
 const projects: ProjectProps['data'][] = [
   {
     title: 'oku',
@@ -89,8 +99,8 @@ const projects: ProjectProps['data'][] = [
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae enim at minima porro! Incidunt, facere dolores tenetur nostrum earum temporibus!
       </p>
       <div class="flex gap-4 items-center justify-center mt-4 z-10">
-        <Button name="Join Us" priority="primary" link="https://chat.productdevbook.com" blank icon="discord" />
-        <Button name="Github" priority="secondary" link="https://chat.productdevbook.com" blank icon="github" />
+        <Button name="Join Us" priority="primary" link="https://chat.productdevbook.com" blank icon="discord" @click="linksClick('discord')" />
+        <Button name="Github" priority="secondary" link="https://github.com/productdevbookcom" blank icon="github" @click="linksClick('github')" />
       </div>
     </div>
 
