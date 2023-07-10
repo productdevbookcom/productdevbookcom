@@ -13,6 +13,16 @@ export interface ProjectProps {
 }
 
 defineProps<ProjectProps>()
+
+const { trackEvent } = usePlausible()
+
+function linksClick(name: string) {
+  trackEvent('project', {
+    props: {
+      name,
+    },
+  })
+}
 </script>
 
 <template>
@@ -37,7 +47,7 @@ defineProps<ProjectProps>()
         <h3 class="text-white text-2xl font-medium">
           {{ item.name }}
         </h3>
-        <a target="_blank" class="text-[#ccc] transition duration-300 hover:text-white flex items-center gap-1 group" :href="data.github ? `https://github.com/${data.github}` : ''">View All <span class="i-ic-outline-arrow-forward transition-all duration-300 group-hover:translate-x-1" /> </a>
+        <a target="_blank" class="text-[#ccc] transition duration-300 hover:text-white flex items-center gap-1 group" :href="data.github ? `https://github.com/${data.github}` : ''" @click="linksClick(`${data.github}`)">View All <span class="i-ic-outline-arrow-forward transition-all duration-300 group-hover:translate-x-1" /> </a>
       </div>
 
       <ProjectCards class="mt-4" :data="item.data" :class="{ '!hidden': !data.cards }" />

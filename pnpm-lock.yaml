@@ -32,6 +32,9 @@ devDependencies:
   nuxt:
     specifier: ^3.6.2
     version: 3.6.2(@types/node@18.0.0)(eslint@8.44.0)(typescript@5.1.6)
+  v-plausible:
+    specifier: ^1.0.2
+    version: 1.0.2(vue@3.3.4)
 
 packages:
 
@@ -6737,6 +6740,11 @@ packages:
       pathe: 1.1.1
     dev: true
 
+  /plausible-tracker@0.3.8:
+    resolution: {integrity: sha512-lmOWYQ7s9KOUJ1R+YTOR3HrjdbxIS2Z4de0P/Jx2dQPteznJl2eX3tXxKClpvbfyGP59B5bbhW8ftN59HbbFSg==}
+    engines: {node: '>=10'}
+    dev: true
+
   /pluralize@8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
@@ -8544,6 +8552,21 @@ packages:
       is-generator-function: 1.0.10
       is-typed-array: 1.1.10
       which-typed-array: 1.1.9
+    dev: true
+
+  /v-plausible@1.0.2(vue@3.3.4):
+    resolution: {integrity: sha512-IVc5Zhlr1MYcFuravR44XWLM6VqbJMfcf9EfG6o3C5tFDmx+VxQk84X0tLHNF5DQnbznAkA/PxZZcZNAQqRDXg==}
+    engines: {node: '>=16', pnpm: '>=8'}
+    peerDependencies:
+      vue: '=>3.3.0'
+    dependencies:
+      '@nuxt/kit': 3.6.2
+      defu: 6.1.2
+      plausible-tracker: 0.3.8
+      vue: 3.3.4
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: true
 
   /validate-npm-package-license@3.0.4:
