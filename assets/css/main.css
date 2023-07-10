@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
 
   body {
     -webkit-font-smoothing: antialiased;
@@ -12,5 +16,15 @@
     -webkit-tap-highlight-color: transparent;
     letter-spacing: -0.01em;
     overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .light {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  opacity: 0.30000001192092896;
+  background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(217, 217, 217, 0.10) 0%, rgba(217, 217, 217, 0.00) 100%);
   }
 }

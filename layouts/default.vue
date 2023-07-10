@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-woodsmoke-950 w-full h-full">
+  <div class="bg-woodsmoke-950">
     <slot />
   </div>
 </template>

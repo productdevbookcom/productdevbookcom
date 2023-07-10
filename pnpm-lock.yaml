@@ -14,6 +14,9 @@ devDependencies:
   '@iconify-json/fa-brands':
     specifier: ^1.1.4
     version: 1.1.4
+  '@iconify-json/ic':
+    specifier: ^1.1.13
+    version: 1.1.13
   '@nuxt/devtools':
     specifier: ^0.6.7
     version: 0.6.7(nuxt@3.6.2)(vite@4.4.0)
@@ -1005,6 +1008,12 @@ packages:
 
   /@iconify-json/fa-brands@1.1.4:
     resolution: {integrity: sha512-JT9BgOFT17qgwctdjGbIKENcW2jEOzo22/SPTAT2T4ygQPtG4niBFnjkDZNcqk9JHSyc6sYvgb9NFKoJ8eGkHQ==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/ic@1.1.13:
+    resolution: {integrity: sha512-5i5zal/VRwTrs99iMTnG1Zu97bgX9Mkiu9TzR1U1rHBylUnBW+HkOweoQVEPgQITGG024/lNbZxU+3Aa2xuDww==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
