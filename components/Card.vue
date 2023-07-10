@@ -17,7 +17,7 @@ defineProps<CardProps>()
 
       </div>
       <span class="text-white font-medium">{{ title }}</span>
-      <p class="text-[#6D6D6D] text-sm md:text-base">{{ description }}</p>
+      <p class="text-[#6D6D6D] text-sm md:text-base line-clamp-2">{{ description }}</p>
       <div class="card-light" />
     </a>
   </div>

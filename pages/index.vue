@@ -85,10 +85,10 @@ const projects: ProjectProps['data'][] = [
       <h1 class="text-2xl text-white font-medium md:text-5xl max-w-[600px] text-center !leading-snug z-10">
         We Develop Open Source Projects For All
       </h1>
-      <p class="text-base sm:text-xl text-[#747474] leading-normal max-w-[600px] text-center">
+      <p class="text-base sm:text-xl text-[#747474] leading-normal max-w-[600px] text-center z-10">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae enim at minima porro! Incidunt, facere dolores tenetur nostrum earum temporibus!
       </p>
-      <div class="flex gap-4 items-center justify-center mt-4">
+      <div class="flex gap-4 items-center justify-center mt-4 z-10">
         <Button name="Join Us" priority="primary" link="https://chat.productdevbook.com" blank icon="discord" />
         <Button name="Github" priority="secondary" link="https://chat.productdevbook.com" blank icon="github" />
       </div>
@@ -106,4 +106,5 @@ const projects: ProjectProps['data'][] = [
       <Newsletter />
     </div>
   </div>
+  <Footer />
 </template>
