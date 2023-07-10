@@ -81,7 +81,7 @@ const projects: ProjectProps['data'][] = [
   <div class="flex flex-col items-center">
     <!-- hero section -->
     <div class="flex flex-col justify-center gap-4 mt-40 relative">
-      <div class="light absolute -left-[200px] -top-[400px]" />
+      <div class="light absolute -left-[200px] -top-[100px]" />
       <h1 class="text-2xl text-white font-medium md:text-5xl max-w-[600px] text-center !leading-snug z-10">
         We Develop Open Source Projects For All
       </h1>

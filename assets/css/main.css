@@ -21,8 +21,8 @@
 
 @layer components {
   .light {
-    width: 750px;
-    height: 750px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
   opacity: 0.30000001192092896;
   background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(217, 217, 217, 0.10) 0%, rgba(217, 217, 217, 0.00) 100%);
