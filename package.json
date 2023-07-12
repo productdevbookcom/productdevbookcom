@@ -1,6 +1,7 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "packageManager": "pnpm@8.6.6",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -9,6 +10,10 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "fix": "eslint . --fix"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8.6.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.7",
