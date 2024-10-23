@@ -16,14 +16,14 @@
     "fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.39.7",
+    "@antfu/eslint-config": "^3.8.0",
     "@egoist/tailwindcss-icons": "^1.1.0",
     "@iconify-json/fa-brands": "^1.1.4",
     "@iconify-json/ic": "^1.1.13",
-    "@nuxt/devtools": "^0.6.7",
+    "@nuxt/devtools": "^1.6.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "@types/node": "^18.16.19",
-    "eslint": "^8.44.0",
+    "@types/node": "^20.17.0",
+    "eslint": "^9.13.0",
     "nuxt": "^3.6.2",
     "v-plausible": "^1.0.2"
   }
